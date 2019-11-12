@@ -1,0 +1,325 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+@font-face{
+    font-family:'Schoolbell';
+    src: url('fonts/Schoolbell-Regular.ttf');
+}
+@font-face{
+    font-family:'ubuntu';
+    src: url('fonts/Ubuntu-Regular.ttf');
+}
+
+@-webkit-keyframes logoIzq {
+    0%   {left:0%; top:0%;}
+    25%  {left:0%; top:280%;}
+    50%  {left:100%; top:280%;}
+    75% {left:100%; top:0%;}
+    100% {left:0%; top:0%;}
+}
+@keyframes logoIzq {
+    0%   {left:0%; top:0%;}
+    25%  {left:0%; top:280%;}
+    50%  {left:90%; top:280%;}
+    75% {left:90%; top:0%;}
+    100% {left:0%; top:0%;}
+}
+@-webkit-keyframes logoDer {
+    0%   {left:0%; top:0%;}
+    25%  {left:0%; top:280%;}
+    50%  {left:-90%; top:280%;}
+    75% {left:-90%; top:0%;}
+    100% {left:0%; top:0%;}
+}
+@keyframes logoDer {
+    0%   {left:0%; top:0%;}
+    25%  {left:0%; top:280%;}
+    50%  {left:-90%; top:280%;}
+    75% {left:-90%; top:0%;}
+    100% {left:0%; top:0%;}
+}
+body{
+    background-attachment: fixed;
+    background-image: url("../imagenes/texturaPiedra_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+    position: fixed;
+    display: flex;
+    height: auto;
+    width: 100%;
+    text-align: center;
+}
+
+header h1{
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 45%;
+    font-family: 'Schoolbell', cursive;
+    font-size: 4rem;
+    color: #266E04;
+    text-shadow: 2px 2px 2px #ffffff;
+}
+
+#logoIzquierda{
+    position: relative;
+    float: left;
+    animation-name: logoIzq;
+    animation-duration: 10s;
+    -webkit-animation-name: logoIzq; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
+
+}
+#logoDerecha{
+    position: relative;
+    float: right;
+    animation-name: logoDer;
+    animation-duration: 10s;
+    -webkit-animation-name: logoDer; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
+
+}
+nav{
+    position : fixed;
+    margin: 20vh auto auto 20vw;
+    height: auto;
+    width : 50%;
+    font-size : 1.4em;
+  
+}
+
+nav a{
+    text-decoration: none;
+    margin-left: 10vh;
+    font-family: 'Schoolbell', cursive;
+    font-size: 2rem;
+    color:#ffffff;
+    text-shadow: 2px 3px 0px #266E04;
+}
+
+.select{
+    border:4px solid hsl(86, 96%, 36%);
+    border-radius: 10px;
+    padding: 1%;
+}
+
+aside{
+    position: fixed;
+    float: left;
+    margin-top: 25vh;
+}
+
+#enlacesInteres h2 { 
+    font-family:ubuntu;
+    
+    text-align: center; 
+    color: #266E04;
+    text-shadow: 2px 2px 2px #ffffff;
+}
+
+#enlacesInteres ul { 
+    list-style:none; 
+
+}
+
+#enlacesInteres ul li { 
+    font-family:ubuntu; 
+    text-align: center;
+}
+
+#enlacesInteres ul li a { 
+
+    display:block; 
+    width:15vw; 
+    height:7vh; 
+    margin: 4% auto auto 4%;
+    background-color:#333; 
+    border-left:5px solid #222; 
+    border-right:5px solid #222; 
+    padding-left:10px;
+    padding-top: 10%;
+    text-decoration:none; 
+    color:#bfe1f1; 
+}
+
+#enlacesInteres ul li a:hover { 
+    -moz-transform:rotate(-5deg); 
+    -moz-box-shadow:10px 10px 20px #000000;
+    -webkit-transform:rotate(-5deg); 
+    -webkit-box-shadow:10px 10px 20px #000000;
+    transform:rotate(4deg); box-shadow:2% 2% 2% #000000; 
+    margin-left: 2%;
+}
+
+#listaJuegos{
+    position: fixed;
+    float: right;
+    margin: 25vh 2vw auto 81vw;
+}
+
+#listaJuegos h2 { 
+    font-family:ubuntu; 
+    text-align: center; 
+    color: #266E04;
+    text-shadow: 2px 2px 2px #ffffff;
+}
+
+#listaJuegos ul { list-style:none;}
+
+#listaJuegos ul li { 
+    font-family:ubuntu; 
+    text-align: center;
+}
+
+#listaJuegos ul li a { 
+
+    display:block; 
+    width:15vw; 
+    height:3vh; 
+    margin: 2% auto auto 4%;
+    background-color:#266E04; 
+    border-left:5px solid #222; 
+    border-right:5px solid #222; 
+    padding:3%;
+    text-decoration:none; 
+    color:#bfe1f1; 
+}
+
+#listaJuegos ul li a:hover { 
+    -moz-transform:rotate(-5deg); 
+    -moz-box-shadow:10px 10px 20px #000000;
+    -webkit-transform:rotate(-5deg); 
+    -webkit-box-shadow:10px 10px 20px #000000;
+    transform:rotate(4deg); box-shadow:2% 2% 2% #000000; 
+    margin-left: 2%;
+    background-color:hsla(101, 93%, 22%, .6);
+}
+
+article{
+ 
+    position: absolute;
+    margin: 30vh auto 12vh 20vw ;
+    padding: 1%;
+    width: 60vw;
+    border-left: 2px solid #266E04;
+    border-bottom:  2px solid transparent;
+    border-image: linear-gradient(to right ,#266E04 , rgba(255,255,255,0)) 1;
+    background-image: linear-gradient(to right, rgba(255,255,255,.8), rgba(255,255,255,0));
+    
+}
+
+#contenedorImagenes{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#galeria_imagen{
+    width: 100%;
+    padding-top: 1%;
+ 
+}
+
+#contenedorImagenes img{
+    width: 70%;
+    height: 70%;
+    
+}
+
+.juego{
+    display: inline-block;
+    font-family: ubuntu;
+    margin: 2vh auto;
+    padding: 2px;
+    border-bottom:  2px solid #266E04;
+    border-image: linear-gradient(to right ,#266E04 , rgba(255,255,255,0)) 1;
+}
+.imagenesJuegos{
+    width: 20vw;
+    float: left;
+    margin-right: 15px;
+}
+
+.juegos p{
+    float: right;
+}
+
+.intro{
+    font-family: ubuntu;
+    opacity: 1;
+    line-height : 4vh;
+}
+
+footer {    
+    background-color: #ffffff;
+    position: fixed;
+    display:flex;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    color:  #266E04;;
+  }
+  footer ul {
+    margin : 0 auto 0 8%;
+    width : 100%;
+    list-style : none;
+    }
+footer ul li {
+    padding-top: 2px;
+    float : left;
+    }
+footer ul li a {
+    display :flex;
+    margin-right : 20px;
+    width : 40%;
+    
+
+    }
+footer ul li a:hover {
+    color : #266E04;;
+    }
+footer img {
+	border: 2px solid hsl(0, 0%, 80%);
+	float: left;
+	margin: 20%;
+	-webkit-transition: margin 0.5s ease-out;
+	-moz-transition: margin 0.5s ease-out;
+	-ms-transition: margin 0.5s ease-out;
+	transition: margin 0.5s ease-out;
+}
+footer img:hover {
+	margin-top: 2px;
+	border: 2px solid hsl(60, 100%, 50%);
+}
+footer p{
+    margin: 0 auto;
+    text-align: right;
+    color:  #266E04;
+    
+}
+
+.telefonoEmail{
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+    float: left;
+    font-size: 1.3rem;
+}
+
+.telefonoEmail li{
+    padding-right: 5%;
+
+}
+
+.telefonoEmail li a{
+    text-decoration: none;
+    font-size: 2.4rem;
+    padding-left: 5%;
+}
