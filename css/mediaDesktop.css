@@ -1,18 +1,26 @@
-@media (min-width: 768px) {
+
+
+@media (min-width: 768px) { /* Pantallas >= 768px */
+
+    /*----------------------------HEADER--------------------------*/
+
     header h1{font-size: 3rem;margin-top: 4vh;}
 
     #logoIzquierda, #logoDerecha{width: 15%; height: 15%;}
 
-    nav{margin: 16vh 2vw auto 2vw;font-size : 2.5rem; }
+    /*-----------------------------NAV----------------------------*/
 
-    nav a{padding:0 2vh;}
+    nav{margin: 18vh 2vw auto 6vw;font-size : 2rem; }
 
+    nav a{padding:0 5vh;}
+
+    /*-----------------------------MAIN----------------------------*/
     .intro{font-size: 1rem;line-height : 4vh;}
 
     article{
         width: 80vw;
         height: 55vh;
-        margin: 33vh 2vw auto 4vw ;     
+        margin: 30vh 2vw auto 4vw ;     
     }
     main{
         width: 80vw;
@@ -20,6 +28,7 @@
         margin: 33vh 2vw auto 4vw ;     
     }
 
+    /*---------------------PAGINA JUEGOS---------------------------*/
     .juego{
         width: 65vw;
     }
@@ -28,66 +37,88 @@
         position: relative;
         display: block;
         width: 40vw;
-        margin: 25vh 2vw auto 78vw;
+        margin: 30vh 2vw auto 78vw;
     }
     #listaJuegos ul { 
         height: 70vh;
         width: 20vw;
     }
+    #listaJuegos ul li  {
+        padding: 4%;
+    }
 
-    .formulario{margin-top: 28vh; height: 42vh;}
+    /*----------------------PAGINA GALERIA---------------------------*/
+
+    #galeria{margin-left: 8vh; width: 100vh;}
+
+    /*----------------------FORMULARIO-------------------------------*/
+    .formulario{margin-top: 28vh; height: 56vh;}
+
+    .formulario h2{margin-left:32vw;}
+
+    .contacto textarea {width: 60vw;}
+
+    .contacto button {margin-left:23vw;}
+
 }
 
-@media (min-width: 992px){
+@media (min-width: 992px){  /* Pantallas >= 992px */
 
-    header{
-        width: 80vw;
-    }
+    /*----------------------------HEADER----------------------------*/
 
-    header h1{
-        font-size: 3.6rem;
-        margin-top: 4vh;
-    }
+    header h1{font-size: 3.6rem; margin-top: 4vh;}
 
-    nav{
-        margin: 25vh 2vw auto 15vw;
-        font-size : 1.6rem; 
-    }
-    .intro{
-        line-height : 4vh;
-    }
+    #logoIzquierda, #logoDerecha{width: 10%; height: 10%;}
+
+    nav{margin: 26vh 2vw auto 16vw; font-size : 2rem;}
+
+    nav a{margin-left: 5%;}
+
+    /*----------------------------MAIN-------------------------------*/
 
     article{
-        width: 70vw;
+        width: 58vw;
         height: 47vh;
         float: right;
-        margin: 36vh 0vw auto 20vw ;
+        margin: 36vh 0vw auto 18vw ;
     }
     main{
         width: 70vw;
-        height: 47vh;
+        height: 50vh;
         float: right;
-        margin: 36vh 0vw auto 20vw ;
+        margin: 38vh 0vw auto 20vw ;
     }
+  
+    .intro{line-height: 4vh;}
 
-    .juego{
-        width: 55vw;
-    }
+    /*---------------------------PAGINA JUEGOS---------------------------*/
 
-    .formulario{
-        padding: 1%;
-        height: 52vh;
-        width: 70vw;
-        margin: 30vh 6vw 12vh 23vw ;
-    }
+    .juego{width: 55vw;}
+
     #listaJuegos{
         position: relative;
         display: block;
         margin: 20vh 2vw auto 79vw;
     }
+    #listaJuegos ul li a {padding: 0; margin: 0 auto;}
+
+    /*----------------------------PAGINA GALERIA------------------------------*/
+
+    #galeria{margin-left: 25vw; margin-top: 40vh; width: 100vh;}
 
     #enlacesInteres{
         visibility: visible;
         margin: 10vh auto ;
     }
+
+    /*------------------------------FORMULARIO--------------------------------*/
+
+    .formulario{
+        padding: 0;
+        height: 52vh;
+        width: 70vw;
+        margin: 36vh 6vw 12vh 23vw ;
+    }
+
+    .contacto button {margin-left:6vw;}
 }
