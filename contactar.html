@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="es">
   
 <head>
     <meta charset="utf-8"/>
@@ -17,8 +17,11 @@
         function Validardatos(){
         var nombre = document.contacto.nombre.value;
         var apellido = document.contacto.apellidos.value;
-        var ventana=window.open("","",'width=340,height=100,left=500,top=300');
-        ventana.document.write("<B>Gracias por tu información "  + nombre + " " + apellido +" <BR>En breve nos pondremos en contacto contigo</B>");
+
+            if((document.contacto.nombre.value != '')&&(document.contacto.apellidos.value != '')){
+                var ventana=window.open("","",'width=340,height=100,left=500,top=300');
+                ventana.document.write("<B>Gracias por tu información "  + nombre + " " + apellido +" <BR>En breve nos pondremos en contacto contigo</B>");
+                }
         }
         function VerTelefono(){
                 var ventana=window.open("","",'width=340,height=100,left=500,top=300');
@@ -33,9 +36,9 @@
     
 <body>
     <header>
-        <img src="imagenes/favicon/ms-icon-144x144.png" id="logoIzquierda">
+        <img src="imagenes/favicon/ms-icon-144x144.png" id="logoIzquierda" alt="logo">
         <h1>Juegos Tradicionales</h1>
-        <img src="imagenes/favicon/ms-icon-144x144.png" id="logoDerecha">
+        <img src="imagenes/favicon/ms-icon-144x144.png" id="logoDerecha" alt="logo">
     </header>
 
     <nav>
@@ -47,8 +50,8 @@
 
     <aside>
         <div id="enlacesInteres">
-            <ul>
-                <h3>Enlaces de interés</h3>
+            <h3>Enlaces de interés</h3>
+            <ul>    
                 <li><a href="https://entradium.com/events/juego-y-creatividad-con-piezas-sueltas-que-es-y-como-acompanar-estas-habilidades-para-la-vida-con-material-que-enriquece">Creatividad con piezas</a></li>
                 <li><a href="https://www.juegostradicionales.es/">juegostradicionales.es</a></li>
                 <li><a href="http://www.mundopadres.com/">Mundo padres</a></li>
@@ -58,14 +61,14 @@
     </aside>
     <article class="formulario">
         <section>
-        <form class="contacto" method="post" action="" name="contacto">            
+        <form class="contacto" method="post" name="contacto">            
             <h2>Datos personales</h2>
             <ul>
                 <li><input type="text" maxlength="20" name="nombre" required placeholder="Nombre"></li>
                 <li><input type="text" maxlength="40" name="apellidos" required placeholder="Apellidos"></li>
                 <li><input type="text" maxlength="40" name="email" required placeholder="ejemplo@ejemplo.com"></li>
                 <li><input type="tel" maxlength="9" name="telefono" placeholder="Teléfono"></li>
-                <li><textarea name="mensaje" cols="30" rows="3">Cuentanos lo que quieras</textarea></li>
+                <li><textarea name="mensaje" cols="30" rows="3" placeholder="Cuéntanos lo que quieras"></textarea></li>
                            
                 <!--Aceptar las condiciones-->
                 <li><input type="checkbox" name="condiciones" value="acepto" required> Acepto las condiciones <a href="condiciones.html" target="_blank">anexo</a></li>
