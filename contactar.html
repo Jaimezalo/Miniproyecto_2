@@ -8,6 +8,7 @@
     <title>Juegos Tradicionales</title>
     <link rel="stylesheet" type="text/css" href="css/miniproyecto_2.css"> 
     <link rel="stylesheet" type="text/css" href="css/formulario.css">
+    <link rel="stylesheet" type="text/css" href="css/mediaDesktop.css">
     <!--favicom-->
     <link rel="icon" type="image/png" href="imagenes/favicon/favicon.ico" sizes="96x96" />
     <link rel="icon" type="image/png" href="imagenes/favicon/favicon.ico" sizes="32x32" />
@@ -19,13 +20,22 @@
         var ventana=window.open("","",'width=340,height=100,left=500,top=300');
         ventana.document.write("<B>Gracias por tu información "  + nombre + " " + apellido +" <BR>En breve nos pondremos en contacto contigo</B>");
         }
+        function VerTelefono(){
+                var ventana=window.open("","",'width=340,height=100,left=500,top=300');
+                ventana.document.write("<B>Teléfono: 638 126 845</B>") 
+        }
+        function VerEmail(){
+            var ventana=window.open("","",'width=340,height=100,left=500,top=300');
+            ventana.document.write("<B>Email: jaimezalo@gmail.com</B>") 
+        }
     </script>
 </head>
     
 <body>
     <header>
-        <img src="imagenes/favicon/ms-icon-144x144.png">
+        <img src="imagenes/favicon/ms-icon-144x144.png" id="logoIzquierda">
         <h1>Juegos Tradicionales</h1>
+        <img src="imagenes/favicon/ms-icon-144x144.png" id="logoDerecha">
     </header>
 
     <nav>
@@ -51,14 +61,14 @@
         <form class="contacto" method="post" action="" name="contacto">            
             <h2>Datos personales</h2>
             <ul>
-                <li>Nombre: <input type="text" maxlength="20" name="nombre" required>
-                Apellidos: <input type="text" maxlength="40" name="apellidos" required></li>
-                <li>E-Mail: <input type="text" maxlength="40" name="email" value="@" required placeholder="ejemplo@ejemplo.com">
-                Téfono: <input type="tel" maxlength="9" name="telefono"></li>
-                <li>Deja tu mensaje: <textarea name="mensaje" cols="40" rows="5">Cuentanos lo que quieras</textarea></li>
+                <li><input type="text" maxlength="20" name="nombre" required placeholder="Nombre"></li>
+                <li><input type="text" maxlength="40" name="apellidos" required placeholder="Apellidos"></li>
+                <li><input type="text" maxlength="40" name="email" required placeholder="ejemplo@ejemplo.com"></li>
+                <li><input type="tel" maxlength="9" name="telefono" placeholder="Teléfono"></li>
+                <li><textarea name="mensaje" cols="30" rows="3">Cuentanos lo que quieras</textarea></li>
                            
                 <!--Aceptar las condiciones-->
-                <li><input type="checkbox" name="condiciones" value="acepto" required>Acepto las condiciones especificadas en el <a href="condiciones.html" target="_blank">anexo</a></li>
+                <li><input type="checkbox" name="condiciones" value="acepto" required> Acepto las condiciones <a href="condiciones.html" target="_blank">anexo</a></li>
                 <!--Botones de enviar y borrar-->
                 <li><button class="submit" type="submit" onclick="Validardatos()">Enviar</button> <button class="submit" type="reset" value="Limpiar">Limpiar</button></li>
             </ul> 
@@ -72,14 +82,12 @@
             <li><a href="https://www.linkedin.com/in/jaime-zalona-garcia/" target="_blank"><img src="imagenes/linkedin.jpg" alt="Mi Linkedin" width="40" height="35"></a></li>  
             <li><a href="https://twitter.com/jaimezalogar" target="_blank"><img src="imagenes/twitter.jpg" alt="Mi Twitter" width="40" height="35"></a></li>
             <li><a href="https://www.facebook.com/jzalonagarcia" target="_blank"><img src="imagenes/facebook.jpg" alt="Mi Facebook" width="40" height="35"></a></li>
-            <li><a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="¡CSS Válido!" /></a></li>
-
         </ul> 
         <ul class="telefonoEmail">
-            <li>&#x0260E; 638126845</li>
-            <li>&#x02709; jaimezalo@gmail.com</li>
-            <li><a href="boceto/Boceto.pdf" target="_blank">&#9881;</a></li>
-        </ul> 
+                <li onclick="VerTelefono()">&#x0260E;</li>
+                <li onclick="VerEmail()">&#x02709;</li>
+                <li><a href="boceto/Boceto.pdf" target="_blank">&#9881;</a></li>
+            </ul>  
     </footer>
 </body>
 </html>

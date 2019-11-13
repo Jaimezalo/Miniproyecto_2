@@ -7,10 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juegos Tradicionales</title>
     <link rel="stylesheet" type="text/css" href="css/miniproyecto_2.css"> 
+    <link rel="stylesheet" type="text/css" href="css/mediaDesktop.css">
     <!--favicom-->
     <link rel="icon" type="image/png" href="imagenes/favicon/favicon.ico" sizes="96x96" />
     <link rel="icon" type="image/png" href="imagenes/favicon/favicon.ico" sizes="32x32" />
     <link rel="icon" type="image/png" href="imagenes/favicon/favicon.ico" sizes="16x16" />
+    <script>
+            function VerTelefono(){
+                var ventana=window.open("","",'width=340,height=100,left=500,top=300');
+                ventana.document.write("<B>Teléfono: 638 126 845</B>") 
+            }
+            function VerEmail(){
+                var ventana=window.open("","",'width=340,height=100,left=500,top=300');
+                ventana.document.write("<B>Email: jaimezalo@gmail.com</B>") 
+            }
+    </script>
 </head>
     
 <body>
@@ -93,14 +104,13 @@
             <li><a href="https://www.linkedin.com/in/jaime-zalona-garcia/" target="_blank"><img src="imagenes/linkedin.jpg" alt="Mi Linkedin" width="40" height="35"></a></li>  
             <li><a href="https://twitter.com/jaimezalogar" target="_blank"><img src="imagenes/twitter.jpg" alt="Mi Twitter" width="40" height="35"></a></li>
             <li><a href="https://www.facebook.com/jzalonagarcia" target="_blank"><img src="imagenes/facebook.jpg" alt="Mi Facebook" width="40" height="35"></a></li>
-            <li><a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="¡CSS Válido!" /></a></li>
 
         </ul> 
         <ul class="telefonoEmail">
-            <li>&#x0260E; 638126845</li>
-            <li>&#x02709; jaimezalo@gmail.com</li>
-            <li><a href="boceto/Boceto.pdf" target="_blank">&#9881;</a></li>
-        </ul> 
+                <li onclick="VerTelefono()">&#x0260E;</li>
+                <li onclick="VerEmail()">&#x02709;</li>
+                <li><a href="boceto/Boceto.pdf" target="_blank">&#9881;</a></li>
+            </ul> 
     </footer>
 </body>
 </html>

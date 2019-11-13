@@ -1,0 +1,86 @@
+@media (min-width: 768px) {
+
+    header h1{
+        font-size: 3rem;
+        margin-top: 4vh;
+    }
+
+    nav{
+        margin: 20vh 2vw auto 5vw;
+        font-size : 2rem; 
+    }
+    nav a{
+        padding:0 3vh;
+    }
+
+    .intro{
+        font-size: 2rem;
+        line-height : 4vh;
+    }
+    article{
+        margin-top: 27vh;
+    }
+
+    #listaJuegos{
+ 
+        position: relative;
+        display: block;
+        width: 20vw;
+        margin: 70vh 2vw auto 78vw;
+    }
+
+    .formulario{
+        height: 40vh;
+    }
+}
+
+@media (min-width: 992px){
+
+    header h1{
+        font-size: 4rem;
+        margin-top: 4vh;
+    }
+
+    #logoDerecha{
+        width: 20%;
+        height: 20%;
+    }
+
+    #logoIzquierda{
+        width: 20%;
+        height: 20%;
+    }
+
+    nav{
+        margin: 20vh 2vw auto 10vw;
+        font-size : 3rem; 
+    }
+    .intro{
+        font-size: 1rem;
+        line-height : 6vh;
+    }
+
+    article{
+        width: 70vw;
+        float: right;
+        margin: 35vh 0vw auto 20vw ;
+    }
+
+    .formulario{
+        height: 48vh;
+        width: 70vw;
+        margin: 32vh 6vw 12vh 23vw ;
+    }
+    #listaJuegos{
+ 
+        position: relative;
+        display: block;
+        width: 20vw;
+        margin: 65vh 2vw auto 84vw;
+    }
+
+    #enlacesInteres{
+        visibility: visible;
+        margin: 10vh auto ;
+    }
+}

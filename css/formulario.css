@@ -6,9 +6,9 @@
 
 .formulario{
     position: fixed;
-    margin: 28vh auto 12vh 20vw ;
-    padding: 1%;
-    width: 60vw;
+    margin: 25vh 6vw 12vh 2vw ;
+    padding: 2%;
+    width: 91vw;
     border: 2px solid #266E04;
     background-color:hsla(101, 93%, 22%, .6);
 }
@@ -41,23 +41,21 @@
 .required_notification {
     color:#d45252; 
     margin:5px 0 0 0; 
-    display:inline;
-    float:right;
+    display:inline;   
 }
 
 .contacto label {
     width:150px;
     margin-top: 3px;
-    display:inline-block;
-    float:left;
+    display:inline-block;  
     padding:3px;
 }
 .contacto input {
     height:20px; 
-    width:220px; 
+    width:auto; 
     padding:5px 8px;
 }
-.contacto textarea {padding:8px; width:300px;}
+.contacto textarea {padding:8px; width:auto;}
 .contacto button {margin-left:156px;}
 
 .contacto input, .contact_form textarea { 
@@ -93,7 +91,7 @@ button.submit {
     -o-box-shadow: 0 1px 0 0 #9fd574 inset;
     color: white;
     font-weight: bold;
-    padding: 6px 20px;
+    padding: 1% 2%;
     text-align: center;
     text-shadow: 0 -1px 0 #396715;
 }

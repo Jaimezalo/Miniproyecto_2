@@ -4,70 +4,71 @@
 
 }
 
+
 @font-face{
     font-family:'Schoolbell';
-    src: url('fonts/Schoolbell-Regular.ttf');
+    src: url('../fonts/Schoolbell-Regular.ttf');
 }
 @font-face{
     font-family:'ubuntu';
-    src: url('fonts/Ubuntu-Regular.ttf');
+    src: url('../fonts/Ubuntu-Regular.ttf');
 }
 
 @-webkit-keyframes logoIzq {
-    0%   {left:0%; top:0%;}
-    25%  {left:0%; top:280%;}
-    50%  {left:100%; top:280%;}
-    75% {left:100%; top:0%;}
+    0%  {left:0%; top:280%;}
+    50%  {left:78%; top:280%;}
+    75% {left:78%; top:0%;}
     100% {left:0%; top:0%;}
 }
 @keyframes logoIzq {
-    0%   {left:0%; top:0%;}
-    25%  {left:0%; top:280%;}
-    50%  {left:90%; top:280%;}
-    75% {left:90%; top:0%;}
+    0%  {left:0%; top:280%;}
+    50%  {left:78%; top:280%;}
+    75% {left:78%; top:0%;}
     100% {left:0%; top:0%;}
 }
 @-webkit-keyframes logoDer {
-    0%   {left:0%; top:0%;}
-    25%  {left:0%; top:280%;}
-    50%  {left:-90%; top:280%;}
-    75% {left:-90%; top:0%;}
+    0%  {left:0%; top:280%;}
+    50%  {left:-78%; top:280%;}
+    75% {left:-78%; top:0%;}
     100% {left:0%; top:0%;}
 }
 @keyframes logoDer {
-    0%   {left:0%; top:0%;}
-    25%  {left:0%; top:280%;}
-    50%  {left:-90%; top:280%;}
-    75% {left:-90%; top:0%;}
+    0%  {left:0%; top:280%;}
+    50%  {left:-78%; top:280%;}
+    75% {left:-78%; top:0%;}
     100% {left:0%; top:0%;}
 }
 body{
+    position: fixed;
     background-attachment: fixed;
     background-image: url("../imagenes/texturaPiedra_2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
 }
 
+/*----------------------HEADER--------------------------*/
 header{
     position: fixed;
     display: flex;
     height: auto;
     width: 100%;
-    text-align: center;
+
 }
 
 header h1{
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    width: 45%;
+    text-align: center;
+    margin: 2vh auto;
     font-family: 'Schoolbell', cursive;
-    font-size: 4rem;
     color: #266E04;
     text-shadow: 2px 2px 2px #ffffff;
 }
 
 #logoIzquierda{
+    width: 30%; 
+    height: 30%;
     position: relative;
     float: left;
     animation-name: logoIzq;
@@ -77,6 +78,8 @@ header h1{
 
 }
 #logoDerecha{
+    width: 30%;
+    height: 30%;
     position: relative;
     float: right;
     animation-name: logoDer;
@@ -85,28 +88,49 @@ header h1{
     -webkit-animation-duration: 10s; /* Safari 4.0 - 8.0 */
 
 }
+
+/*---------------------------NAV---------------------------------*/
 nav{
     position : fixed;
-    margin: 20vh auto auto 20vw;
+    margin: 20vh 2vw auto 2vw;
     height: auto;
-    width : 50%;
-    font-size : 1.4em;
+    width : 100%;
+    font-size : 1.2rem;
   
 }
 
 nav a{
     text-decoration: none;
-    margin-left: 10vh;
+    margin-left: 2vh;
     font-family: 'Schoolbell', cursive;
-    font-size: 2rem;
     color:#ffffff;
-    text-shadow: 2px 3px 0px #266E04;
+    text-shadow: 2px 2px 0px #266E04;
 }
 
-.select{
-    border:4px solid hsl(86, 96%, 36%);
+.select{ /* Diseño del elemento de navegación cuando está en la página correspondiente*/
+    border:1.5px solid hsl(86, 96%, 36%);
+    color: chartreuse;
     border-radius: 10px;
     padding: 1%;
+}
+
+/*------------------------ARTICLE--------------------------------*/
+
+article{
+    overflow: auto;
+    position: absolute;
+    margin: 25vh 2vw auto 2vw ;
+    padding: 1%;
+    width: 90vw;
+    height: 60vh;
+    border-left: 2px solid #266E04;
+    border-bottom:  2px solid transparent;
+    border-image: linear-gradient(to right ,#266E04 , rgba(255,255,255,0)) 1;
+    background-image: linear-gradient(to right, rgba(255,255,255,.8), rgba(255,255,255,0));
+    
+}
+section{
+    height: 50vh;
 }
 
 aside{
@@ -115,26 +139,126 @@ aside{
     margin-top: 25vh;
 }
 
+/****************************PÁGINA INICIO*******************************/
+
+.intro{ /* Párrafo de introducción en la página de inicio*/
+    font-family: ubuntu;
+    font-size: 1.3rem;
+    padding: 1%;
+    opacity: 1;
+    line-height : 4vh;
+}
+
+/****************************PÁGINA JUEGOS*********************************/
+
+.juego{ /*Apartado de cada juego con la imagen y descripción*/
+    display: inline-block;
+    overflow: auto;
+    height: auto;
+    font-family: ubuntu;
+    margin: 0 auto;
+    padding: 2%;
+    border-bottom:  2px solid #266E04;
+    border-image: linear-gradient(to right ,#266E04 , rgba(255,255,255,0)) 1;
+}
+.imagenesJuegos{ /*Imagen dentro de cada juego*/
+    width: 20vw;
+    float: left;
+    margin-right: 15px;
+}
+
+.juegos p{
+    float: right;
+}
+
+#listaJuegos{
+ 
+    position: relative;
+    display: block;
+    width: auto;
+    margin: 60vh 2vw auto 75vw;
+}
+
+#listaJuegos h2 { 
+    font-family:ubuntu; 
+    text-align: center; 
+    color: #266E04;
+    text-shadow: 2px 2px 2px #ffffff;
+
+}
+
+#listaJuegos ul { 
+    overflow: auto;
+    position: absolute;
+    height: 20vh;
+    list-style:none;
+}
+
+#listaJuegos ul li { 
+    font-family:ubuntu; 
+    text-align: center;
+}
+
+#listaJuegos ul li a { 
+    display:block; 
+    width:auto; 
+    height:auto; 
+    margin: 2% auto auto 4%;
+    background-color:#266E04; 
+    border-left:5px solid #222; 
+    border-right:5px solid #222; 
+    padding:3%;
+    text-decoration:none; 
+    color:#bfe1f1; 
+}
+
+#listaJuegos ul li a:hover { 
+    -moz-transform:rotate(-5deg); 
+    -moz-box-shadow:10px 10px 20px #000000;
+    -webkit-transform:rotate(-5deg); 
+    -webkit-box-shadow:10px 10px 20px #000000;
+    transform:rotate(4deg); box-shadow:2% 2% 2% #000000; 
+    margin-left: 2%;
+    background-color:hsla(101, 93%, 22%, .6);
+}
+
+/********************************PÁGINA GALERIA********************************/
+
+#contenedorImagenes{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#galeria_imagen{
+    width: 100%;
+    padding-top: 1%; 
+}
+
+#contenedorImagenes img{ 
+    width: 100%;
+    height: 70%;
+    
+}
+
+/*------------------------------ASIDE---------------------------------*/
+
+#enlacesInteres{
+    visibility: hidden;
+}
+
 #enlacesInteres h2 { 
     font-family:ubuntu;
-    
     text-align: center; 
     color: #266E04;
     text-shadow: 2px 2px 2px #ffffff;
 }
 
-#enlacesInteres ul { 
-    list-style:none; 
+#enlacesInteres ul { list-style:none; }
 
-}
-
-#enlacesInteres ul li { 
-    font-family:ubuntu; 
-    text-align: center;
-}
+#enlacesInteres ul li { font-family:ubuntu; text-align: center;}
 
 #enlacesInteres ul li a { 
-
     display:block; 
     width:15vw; 
     height:7vh; 
@@ -157,153 +281,43 @@ aside{
     margin-left: 2%;
 }
 
-#listaJuegos{
-    position: fixed;
-    float: right;
-    margin: 25vh 2vw auto 81vw;
-}
-
-#listaJuegos h2 { 
-    font-family:ubuntu; 
-    text-align: center; 
-    color: #266E04;
-    text-shadow: 2px 2px 2px #ffffff;
-}
-
-#listaJuegos ul { list-style:none;}
-
-#listaJuegos ul li { 
-    font-family:ubuntu; 
-    text-align: center;
-}
-
-#listaJuegos ul li a { 
-
-    display:block; 
-    width:15vw; 
-    height:3vh; 
-    margin: 2% auto auto 4%;
-    background-color:#266E04; 
-    border-left:5px solid #222; 
-    border-right:5px solid #222; 
-    padding:3%;
-    text-decoration:none; 
-    color:#bfe1f1; 
-}
-
-#listaJuegos ul li a:hover { 
-    -moz-transform:rotate(-5deg); 
-    -moz-box-shadow:10px 10px 20px #000000;
-    -webkit-transform:rotate(-5deg); 
-    -webkit-box-shadow:10px 10px 20px #000000;
-    transform:rotate(4deg); box-shadow:2% 2% 2% #000000; 
-    margin-left: 2%;
-    background-color:hsla(101, 93%, 22%, .6);
-}
-
-article{
- 
-    position: absolute;
-    margin: 30vh auto 12vh 20vw ;
-    padding: 1%;
-    width: 60vw;
-    border-left: 2px solid #266E04;
-    border-bottom:  2px solid transparent;
-    border-image: linear-gradient(to right ,#266E04 , rgba(255,255,255,0)) 1;
-    background-image: linear-gradient(to right, rgba(255,255,255,.8), rgba(255,255,255,0));
-    
-}
-
-#contenedorImagenes{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#galeria_imagen{
-    width: 100%;
-    padding-top: 1%;
- 
-}
-
-#contenedorImagenes img{
-    width: 70%;
-    height: 70%;
-    
-}
-
-.juego{
-    display: inline-block;
-    font-family: ubuntu;
-    margin: 2vh auto;
-    padding: 2px;
-    border-bottom:  2px solid #266E04;
-    border-image: linear-gradient(to right ,#266E04 , rgba(255,255,255,0)) 1;
-}
-.imagenesJuegos{
-    width: 20vw;
-    float: left;
-    margin-right: 15px;
-}
-
-.juegos p{
-    float: right;
-}
-
-.intro{
-    font-family: ubuntu;
-    opacity: 1;
-    line-height : 4vh;
-}
+/*-------------------------------FOOTER-------------------------------*/
 
 footer {    
     background-color: #ffffff;
     position: fixed;
-    display:flex;
+    display: flex;
     bottom: 0;
     width: 100%;
-    height: 10%;
+    height: auto;
     color:  #266E04;;
   }
-  footer ul {
+footer ul {
     margin : 0 auto 0 8%;
     width : 100%;
     list-style : none;
     }
-footer ul li {
-    padding-top: 2px;
-    float : left;
-    }
+footer ul li {  padding-top: 2%;float : left;}
 footer ul li a {
     display :flex;
-    margin-right : 20px;
-    width : 40%;
-    
-
+    margin-right : 2%;
+    width : 10%;
     }
-footer ul li a:hover {
-    color : #266E04;;
-    }
+footer ul li a:hover {color : #266E04;;}
 footer img {
-	border: 2px solid hsl(0, 0%, 80%);
-	float: left;
-	margin: 20%;
+	border: 1% solid hsl(0, 0%, 80%);
+	float: left;	
 	-webkit-transition: margin 0.5s ease-out;
 	-moz-transition: margin 0.5s ease-out;
 	-ms-transition: margin 0.5s ease-out;
 	transition: margin 0.5s ease-out;
 }
-footer img:hover {
-	margin-top: 2px;
-	border: 2px solid hsl(60, 100%, 50%);
-}
+footer img:hover {margin-top: 2px;border: 2px solid hsl(60, 100%, 50%);}
 footer p{
     margin: 0 auto;
     text-align: right;
-    color:  #266E04;
-    
+    color:  #266E04;    
 }
-
 .telefonoEmail{
     justify-content: center;
     align-items: center;
@@ -312,12 +326,7 @@ footer p{
     float: left;
     font-size: 1.3rem;
 }
-
-.telefonoEmail li{
-    padding-right: 5%;
-
-}
-
+.telefonoEmail li{padding-right: 5%;}
 .telefonoEmail li a{
     text-decoration: none;
     font-size: 2.4rem;
